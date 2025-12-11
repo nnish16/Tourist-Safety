@@ -1,0 +1,7 @@
+{
+  "name": "Sentinel AI - Tourist Safety System",
+  "description": "A dual-view prototype (Authority Dashboard & Tourist PWA) demonstrating AI-driven anomaly detection, safety scoring, and multilingual emergency response logic using Gemini.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
