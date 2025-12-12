@@ -1,0 +1,79 @@
+/* -------- GLOBAL RESET -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background: #0a0f1c;
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* -------- FULLSCREEN MAP SUPPORT -------- */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  z-index: 1;
+}
+
+.leaflet-bottom.leaflet-right {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+/* -------- CUSTOM MARKER PULSE (DYNAMIC COLORS) -------- */
+.marker-pulse {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  --pulse-color: #ef4444; /* default red */
+}
+
+.marker-pulse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--pulse-color) 45%, transparent);
+  animation: pulse 1.3s ease-out infinite;
+}
+
+.marker-pulse::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--pulse-color);
+  box-shadow: 0 0 8px var(--pulse-color);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* Dynamic color variants */
+.marker-red { --pulse-color: #ef4444; }
+.marker-yellow { --pulse-color: #f59e0b; }
+.marker-blue { --pulse-color: #3b82f6; }
+
+/* -------- SMOOTH SCROLLING -------- */
+.modal-scroll {
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.modal-scroll::-webkit-scrollbar {
+  display: none;
+}
