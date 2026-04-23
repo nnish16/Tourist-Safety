@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Sentinel AI — Tourist Safety Platform
 
-# Run and deploy your AI Studio app
+> Real-time tourist safety monitoring with geofencing alerts, incident tracking, and AI-powered risk assessment.
 
-This contains everything you need to run your app locally.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Iw5JSkzx3xTiCzc-iyEkVhgkBwS_gVpb
+## What is this?
 
-## Run Locally
+Sentinel AI is a hackathon project that tackles tourist safety in unfamiliar cities. Tourists register and share location; admins monitor incidents in real-time with AI-powered severity assessment and anomaly detection.
 
-**Prerequisites:**  Node.js
+**Built at a hackathon** — the concept was validated with demo data from Tokyo and Manhattan tourist zones.
 
+## Features
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Dual-role system** — tourists register & share location; admins monitor & respond
+- **Geofencing** — define safe zones and get alerts when tourists deviate
+- **AI anomaly detection** — Gemini categorizes incidents (Lost, Coercion, Medical, Other)
+- **Safety Score gauge** — real-time risk assessment per tourist
+- **Digital ID cards** — generated for each registered tourist
+- **Incident dashboard** — admin view with severity filtering and AI assessment
+
+## Tech Stack
+
+React, TypeScript, Vite, Gemini API, Tailwind CSS, component-based state management
+
+## Quick Start
+
+```bash
+git clone https://github.com/nnish16/Tourist-Safety.git
+cd Tourist-Safety
+npm install
+echo "GEMINI_API_KEY=your_key" > .env.local
+npm run dev
+```
+
+## License
+
+[MIT](LICENSE) — Nishant Sarang
